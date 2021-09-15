@@ -1,0 +1,48 @@
+<!--
+Jenis-jenis CSS
+1. Inline CSS: CSS yang dituliskan didalam tag, pada atribut style
+2. Internal CSS: CSS yang dituliskan pada file yang sama dengan HTML
+3. External CSS: CSS ini dituliskan diluar file HTML
+
+CSS Identifier
+Class: digunakan untuk elemen yang berulang
+ID: digunakan untuk elemen unique, No KTP
+
+<...></...>
+<... />
+<br>
+-->
+
+<head>
+
+    <head>
+        <title>Belajar CSS</title>
+
+        <style>
+            .tulisanMerah {
+                color: red;
+            }
+            #judul {
+                color: green;
+            }
+        </style>
+
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+
+    <body>
+        <!-- ID Unique -->
+        <h1 id="judul">Belajar CSS</h1>
+
+        <!-- Inline CSS -->
+        <p style="color: blue">Hello word!</p>
+
+        <!-- Class -->
+        <p class="tulisanMerah">Hello Internal CSS!</p>
+        <p class="tulisanMerah">Hello Tulisan Merah!</p>
+
+        <!-- External CSS -->
+        <p class="ungu">Hello External CSS!</p>
+    </body>
+
+</head>

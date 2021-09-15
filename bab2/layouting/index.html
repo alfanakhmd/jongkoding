@@ -1,0 +1,91 @@
+<html>
+
+    <head>
+        <title>Belajar Layouting dengan Tabel</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+
+    <body>
+
+        <table id="wrapper">
+            <!-- Header -->
+            <tr>
+                <th colspan="3">
+                    <h1>Website JongKoding</h1>
+                </th>
+            </tr>
+
+            <!-- Menu Horizontal -->
+            <tr>
+                <td colspan="3" id="menu">
+                    <a href="#">Home</a>
+                    <a href="#">Profile</a>
+                    <a href="#">About</a>
+                    <a href="#">Kontak</a>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="3">
+                    <marquee direction="right">Selamat Datang...</marquee>
+                </td>
+            </tr>
+
+            <!-- Content -->
+            <tr>
+
+                <!-- Sidebar -->
+                <td id="sidebarKiri">
+                    <ul>
+                        <li><a href="#">Profile</a></li>
+                        <li><a href="#">Tentang Kami</a></li>
+                        <li><a href="#">Kontak Kami</a></li>
+                    </ul>
+                </td>
+
+                <!-- Content -->
+                <td id="konten">
+
+                    <h3>Judul Artikel</h3>
+
+                    <p>Isi artikel</p>
+
+                    <table border="1">
+                        <tr>
+                            <th colspan="2">Daftar Siswa</th>
+                        </tr>
+                        <tr>
+                            <th>Nama</th>
+                            <th>Telepon</th>
+                        </tr>
+                        <tr>
+                            <td>Budi</td>
+                            <td>08123456789</td>
+                        </tr>
+                    </table>
+
+                </td>
+
+                <!-- Sidebar -->
+                <td id="sidebarKanan">
+                    <h4>Rekomendasi Artikel</h4>
+                    <ul>
+                        <li><a href="#">Artikel 1</a></li>
+                        <li><a href="#">Artikel 2</a></li>
+                        <li><a href="#">Artikel 3</a></li>
+                    </ul>
+                </td>
+
+            </tr>
+
+            <!-- Footer -->
+            <tr>
+                <td colspan="3" id="footer">
+                    <p>Copyright 2021 JongKoding</p>
+                </td>
+            </tr>
+        </table>
+
+    </body>
+
+</html>

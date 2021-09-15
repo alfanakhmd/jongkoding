@@ -1,0 +1,46 @@
+#wrapper {
+    width: 100%;
+    background: #81ecec;
+}
+td {
+    padding: 20px;
+}
+#sidebarKiri {
+    width: 20%;
+    background: #ffeaa7;
+}
+#sidebarKanan {
+    width: 20%;
+    background-color: #fab1a0;
+}
+
+#footer p {
+    text-align: center;
+}
+
+ul {
+    padding-left: 0;
+}
+li {
+    list-style: none;
+}
+li a {
+    text-decoration: none;
+}
+
+h1 {
+    text-decoration: underline;
+}
+
+#menu a {
+    text-decoration: none;
+    background: #0984e3;
+    color: #FFFFFF;
+    padding: 10px;
+    border-radius: 10px;
+    transition: 0.6s;
+}
+#menu a:hover {
+    background: #6c5ce7;
+    padding: 15px;
+}

@@ -1,0 +1,51 @@
+/* Pemanggilan Font Custom */
+@font-face {
+    font-family: "Courgette";
+    src: url("font/Courgette-Regular.ttf");
+}
+
+body {
+    font-family: Arial;
+    background-image: url("background.jpeg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+#tabel-siswa {
+    border-collapse: collapse;
+    border-width: 1px;
+    border-style: solid;
+
+    margin: auto;
+}
+.link {
+    color: red;
+    text-decoration: none;
+}
+.link:hover {
+    color: blue;
+}
+
+#tabel-siswa h1 {
+    font-family: Courgette;
+    margin-top: 15px;
+}
+
+th {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #FFFFFF;
+}
+td {
+    vertical-align: middle;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #FFFFFF;
+}
+th, td {
+    padding: 10px;
+}
+
+img {
+    border-radius: 50%;
+}

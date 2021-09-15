@@ -1,0 +1,10 @@
+/*
+[nama identifier]: nama tag, class, ID
+*/
+p {
+    font-size: 20px;
+    color: pink !important;
+}
+.ungu {
+    color: purple;
+}
