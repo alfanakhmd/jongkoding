@@ -1,0 +1,67 @@
+body, h1 {
+    margin: 0;
+}
+.fixed {
+    position: fixed;
+}
+.text-center {
+    text-align: center;
+}
+/* .wrapper {
+    
+} */
+.container {
+    width: 1200px;
+    margin: auto;
+    display: flex;
+    padding: 8px;
+}
+#header {
+    top: 0;
+    left: 0;
+    right: 0;
+    min-height: 40px;
+    background: blue;
+}
+
+#terbaru {
+    background: #333333;
+    height: calc(100vh - 200px);
+    padding: 100px 0; /* (Vertical Horizontal) */
+    /* padding: 0px 0px 0px 0px; /* Top Right Bottom Left */
+}
+.video {
+    position: relative;
+    height: 400px;
+    width: 50%;
+    padding: 8px;
+}
+.video.kecil {
+    width: 25%;
+}
+
+#terbaru .video .cover img {
+    height: 100%;
+    width: 100%;
+    /* object-fit: contain; /* Dipaksa tarik kesemua sudut*/
+    object-fit: cover; /* Ditampilkan sebutuhnya */
+    /* object-fit: fill; /* Mengisi semua sudut */
+    /* object-fit: scale-down; */
+}
+
+#terbaru .video .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#terbaru .video .overlay img {
+    width: 100px;
+    height: 100px;
+}

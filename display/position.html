@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <style>
+            .box {
+                position: relative;
+                height: 400px;
+                background: blue;
+                overflow: hidden;
+            }
+            .overlay {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+            }
+            img {
+                max-width: 100%;
+            }
+
+            .fixed {
+                position: fixed;
+                background: blue;
+                width:100%;
+                z-index: 2;
+            }
+
+            .sticky {
+                position: sticky;
+                background: purple;
+                top: 80px;
+                z-index: 2;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="fixed">
+            <h1>Header</h1>
+        </div>
+        <div style="height: 400px;"></div>
+        <div class="sticky">
+            <h2>Menu</h2>
+        </div>
+        <div class="box">
+            <img src="https://images.unsplash.com/photo-1631971915243-7e030a468679?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1400&q=60" alt="">
+            <div class="overlay">
+                Text overlay
+            </div>
+        </div>
+    </body>
+</html>
