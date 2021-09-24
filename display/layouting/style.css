@@ -22,11 +22,12 @@ body, h1 {
     right: 0;
     min-height: 40px;
     background: blue;
+    z-index: 2;
 }
 
 #terbaru {
     background: #333333;
-    height: calc(100vh - 200px);
+    height: auto;
     padding: 100px 0; /* (Vertical Horizontal) */
     /* padding: 0px 0px 0px 0px; /* Top Right Bottom Left */
 }
@@ -49,6 +50,10 @@ body, h1 {
     /* object-fit: scale-down; */
 }
 
+#terbaru .video:hover .overlay {
+    opacity: 1;
+}
+
 #terbaru .video .overlay {
     position: absolute;
     top: 0;
@@ -60,8 +65,35 @@ body, h1 {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    opacity: 0;
+    transition: 0.4s;
+    cursor: pointer;
 }
+
 #terbaru .video .overlay img {
     width: 100px;
     height: 100px;
+}
+#terbaru .video .overlay h5 {
+    color: white;
+    text-align: center;
+}
+#terbaru .video .overlay p {
+    color: white;
+    text-align: center;
+}
+
+
+.sidebar {
+    width: 240px;
+    height: 200px;
+    background: red;
+    position: sticky;
+    top: 53px; /* offset */
+}
+.content {
+    flex-grow: 1;
+    height: 1200px;
+    background: linear-gradient(pink, white);
 }
