@@ -1,47 +1,48 @@
 <?php
 
 // If Tuggan dan If Else
-// $absen = 20;
-// $nilai = 90;
-// $cheat = true;
+$absen = 20;
+$nilai = 90;
+$cheat = true;
 
-// if ( ($nilai >= 75 || $absen < 10) && !$cheat ) {
+// Benar ATAU Salah = Benar
+if ( ($nilai >= 75 || $absen < 10) && !$cheat ) {
 
-//     echo "Lulus";
+    echo "Lulus";
 
-// }
-// else {
+}
+else {
 
-//     echo "Tidak Lulus";
+    echo "Tidak Lulus";
 
-// }
+}
 
 
 // If Bertingkat
-// $nilai = 50;
+$nilai = 50;
 
-// if ( $nilai <= 20 ) {
-//     echo "Nilai E";
-// }
-// else if ( $nilai <= 40 ) {
-//     echo "Nilai D";
-// }
-// else if ( $nilai <= 60 ) {
-//     echo "Nilai C";
-// }
-// else if ( $nilai <= 80 ) {
-//     echo "Nilai B";
-// }
-// else {
-//     echo "Nilai A";
-// }
+if ( $nilai <= 20 ) {
+    echo "Nilai E";
+}
+else if ( $nilai <= 40 ) {
+    echo "Nilai D";
+}
+else if ( $nilai <= 60 ) {
+    echo "Nilai C";
+}
+else if ( $nilai <= 80 ) {
+    echo "Nilai B";
+}
+else {
+    echo "Nilai A";
+}
 
 
 // If Bersarang
 $nilai = 50;
 $alpha = 5;
 
-if ( $nilai > 75 ) {
+if ( $nilai == 75 ) {
 
     if ( $alpha > 3 ) {
         
@@ -80,27 +81,32 @@ if ( $nilai > 75 ) {
 
 
 // Switch Case
-// $menu = 2;
-// $harga = 0;
-// $paket_menu = "";
+$menu = 2;
+$harga = 0;
+$paket_menu = "";
 
-// switch ( $menu ) {
+switch ( $menu ) {
 
-//     case 1:
-//     case 2:
-//         $paket_menu = "Paket 1 dan 2";
-//         $harga = 22000;
-//     break;
+    case 1:
+    case 2:
+        $paket_menu = "Paket 1 dan 2";
+        $harga = 22000;
+    break;
 
-//     case 3:
-//         $paket_menu = "Paket 3";
-//         $harga = 25000;
-//     break;
+    case 3:
+        $paket_menu = "Paket 3";
+        $harga = 25000;
+    break;
 
-// }
+    default:
+        $paket_menu = "Paket Mahasiswa";
+        $harga = 5000;
+    break;
 
-// echo "Paket dipilih = " . $paket_menu . "<br />";
-// echo "Harga = " . $harga;
+}
+
+echo "Paket dipilih = " . $paket_menu . "<br />";
+echo "Harga = " . $harga;
 
 
 // Quiz 2

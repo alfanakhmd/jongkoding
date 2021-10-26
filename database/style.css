@@ -1,0 +1,35 @@
+.container, .container-fluid {
+    width: 1200px;
+}
+
+.navbar-brand img {
+    max-height: 80px;
+}
+
+.carousel-inner .carousel-item img {
+    max-height: 720px;
+    object-fit: cover;
+}
+
+.icon i {
+    font-size: 60px;
+}
+
+
+#student-list {
+    padding: 20px 0;
+}
+
+table img {
+    height: 120px;
+    width: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+form img.preview {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 5%;
+}
