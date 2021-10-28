@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Coba;
+use App\Http\Controllers\Blog;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +15,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('coba', [
+//         "name" => "Budi"
+//     ]);
+// });
+Route::get('/', [Blog::class, 'index']);
+Route::get('/blog/form', [Blog::class, 'form']);
+Route::post('/blog/post', [Blog::class, 'post']);
+Route::get('/coba', [Coba::class, 'index']);

@@ -18,7 +18,7 @@ class UsersSeeder extends Seeder
             array(
                 'nama' => 'Admin',
                 'email' => 'admin@jongkoding.id',
-                'email_verified_at' => date('Y-m-d')\,
+                'email_verified_at' => date('Y-m-d'),
                 'password' => hash('sha256', 'admin'),
                 'created_at'    => date('Y-m-d'),
                 'updated_at'    => date('Y-m-d'),
