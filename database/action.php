@@ -54,12 +54,57 @@ if( $upload == false ) {
     $filepath = $path . "default.png";
 }
 
+
+// Prosessing Gallery ==========
+$gallery     = $_FILES['gallery'];
+$galleryText = "";
+$galleryJSON = array();
+
+// Cek gallery adalah array dan ada isinya
+if ( is_array( $gallery['name'] ) && sizeof( $gallery['name'] ) > 0 ) {
+
+    $galleryPath = 'kotak/gallery/';
+
+    foreach ( $gallery['name'] as $key => $fileName ) {
+
+        $fileGallery = $galleryPath . $fileName;   
+        move_uploaded_file( $gallery['tmp_name'][$key], $fileGallery );
+
+        // Teknik menggunakan text
+        $galleryText .= $fileGallery . ";";
+
+        // Teknik menggunakan JSON
+        array_push( $galleryJSON, $fileGallery );
+
+    }
+
+}
+// ==========
+
+// Encode = Array => JSON, Decode JSON => Array/Object
+$galleryJSON = json_encode( $galleryJSON );
+
+// Baris bawah tidak dieksekusi
+// die();
+
 // Menyiapkan Query MySQL untuk dieksekusi
 $query = "
     INSERT INTO siswa 
-    (nis, nama, jk, alamat, tmp_lahir, tgl_lahir, telepon, id_jurusan, foto) 
+    (nis, nama, jk, alamat, tmp_lahir, tgl_lahir, telepon, id_jurusan, foto, gallery, gallery2) 
     VALUES 
-    ('{$nis}', '{$name}', '{$gender}', '{$address}', '{$placeOfBirth}', '{$dateOfBirth}', '{$phone}', 0, '{$filepath}');";
+    (
+        '{$nis}', 
+        '{$name}', 
+        '{$gender}', 
+        '{$address}', 
+        '{$placeOfBirth}', 
+        '{$dateOfBirth}', 
+        '{$phone}', 
+        0, 
+        '{$filepath}', 
+        '{$galleryText}',
+        '{$galleryJSON}'
+    );";
 
 // Mengeksekusi MySQL Query
 $insert = mysqli_query($mysqli, $query);

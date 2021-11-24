@@ -127,7 +127,27 @@ $dataKota = mysqli_query($mysqli, $queryKota);
                                 <input name="phone" id="phone" class="form-control" type="text" placeholder="Nomor Telepon/Handphone" required>
                             </div>
 
-                            <input name="submit" type="submit" value="Kirim" class="btn btn-primary">
+                            <div class="form-group mb-2">
+                                <label for="gallery1">Gallery 1</label>
+                                <input type="file" id="gallery1" class="form-control" name="gallery[]" />
+                            </div>
+
+                            <div class="form-group mb-2">
+                                <label for="gallery2">Gallery 2</label>
+                                <input type="file" id="gallery2" class="form-control" name="gallery[]" />
+                            </div>
+
+                            <div class="form-group mb-2">
+                                <label for="gallery3">Gallery 3</label>
+                                <input type="file" id="gallery3" class="form-control" name="gallery[]" />
+                            </div>
+
+                            <div class="form-group mb-2">
+                                <label for="gallery4">Gallery 4</label>
+                                <input type="file" id="gallery4" class="form-control" name="gallery[]" />
+                            </div>
+
+                            <input name="submit" type="submit" value="Kirim" class="btn mt-2 btn-primary">
 
                         </form>
 

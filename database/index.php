@@ -6,11 +6,30 @@ $query = "SELECT * FROM siswa";
 
 $result = mysqli_query($mysqli, $query);
 
+$select = "SELECT * FROM seo";
+
+$data = mysqli_query($mysqli, $select);
+
+$data = mysqli_fetch_assoc($data);
+
+if ( is_null($data) ) {
+    $data["description"] = "";
+    $data["keywords"] = "";
+    $data["author"] = "";
+    $data["robot_index"] = 1;
+    $data["robot_follow"] = 1;
+}
+
 ?>
 
 <html>
 <head>
     <title>PHP dan MySQL</title>
+
+    <meta name="description" content="<?=$data["description"]?>" />
+    <meta name="keywords" content="<?=$data["keywords"]?>" />
+    <meta name="author" content="<?=$data["author"]?>" />
+    <meta name="robots" content="<?=($data["robot_index"] ? "index" : "noindex")?>,<?=($data["robot_follow"] ? "follow" : "nofollow")?>" />
 
     <!-- Memanggil Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -55,6 +74,9 @@ $result = mysqli_query($mysqli, $query);
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="index.php">Daftar Siswa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="seo.php">Pengaturan SEO</a>
                     </li>
 
                     <li class="nav-item">
@@ -140,6 +162,39 @@ $result = mysqli_query($mysqli, $query);
                                     <a href="delete.php?nis=' . $siswa["nis"] . '" onclick="return confirm_delete()">Delete</a>
                                 </td>
                             </tr>';
+
+                            // Menggunakan cara berbasis text
+                            if ( !empty ( $siswa['gallery'] ) ) {
+
+                                $gallery = explode(';', $siswa["gallery"]);
+
+                                echo '<tr> <td colspan="7">';
+                                echo '<h1>Text</h1>';
+
+                                foreach ( $gallery as $i => $img ) {
+                                    if ( $i != ( sizeof($gallery) - 1 ) )
+                                    echo '<img src="' . $img . '" height="100" />';
+                                }
+                                        
+                                echo '</td> </tr>';
+
+                            }
+
+                            // JSON
+                            if ( !empty( $siswa['gallery2'] ) ) {
+
+                                $gallery = json_decode($siswa['gallery2']);
+
+                                echo '<tr> <td colspan="7">';
+                                echo '<h1>JSON</h1>';
+
+                                foreach ( $gallery as $img ) {
+                                    echo '<img src="' . $img . '" height="100" />';
+                                }
+                                        
+                                echo '</td> </tr>';
+                                
+                            }
 
                         }
 
